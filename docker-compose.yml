@@ -1,0 +1,14 @@
+version: "3"
+services:
+  mysql:
+    image: mysql
+    networks:
+      - default
+    environment:
+      - MYSQL_ROOT_PASSWORD=fingerblaster
+      - MYSQL_DATABASE=wordpress
+    volumes:
+      - /home/matt/docker-volumes/mysql:/var/lib/mysql
+networks:
+  default:
+    driver: bridge
